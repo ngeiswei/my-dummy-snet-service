@@ -12,7 +12,7 @@ folder, unless specified otherwise.
 To build locally the docker image run
 
 ```bash
-docker build -t my-dummy-snet-service --build-arg org_name=<YOUR_ORG_NAME> .
+docker build -t my-snet-service --build-arg org_name=<YOUR_ORG_NAME> .
 ```
 
 This create an image with everthing you need to publish you service.
@@ -21,7 +21,7 @@ A user called `user` is created as well with no password.
 Then you can enter a container of that image with
 
 ```bash
-docker run -it my-dummy-snet-service bash -i
+docker run -it my-snet-service bash -i
 ```
 
 Once you're inside the container, you may start ETCD

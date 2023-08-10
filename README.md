@@ -1,4 +1,4 @@
-# My Dummy SNET Service
+# My SNET Service
 
 Personal tutorial on how to publish an snet service, based on [SNET Full Guide (Testnet)](https://docs.google.com/document/d/1jkkIMvUObSc81Cv3WXl9wtjFwt-itFSaOctyGdPg_30).
 It is meant for my own consumption.

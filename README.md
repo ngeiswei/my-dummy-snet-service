@@ -15,7 +15,7 @@ To build locally the docker image run
 docker build -t my-snet-service --build-arg org_name=<YOUR_ORG_NAME> .
 ```
 
-This create an image with everthing you need to publish your service.
+This creates an image with everthing you need to publish your service.
 A user called `user` is created as well with no password.
 
 Then you can enter a container of that image with

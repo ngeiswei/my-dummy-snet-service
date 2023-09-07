@@ -4,6 +4,8 @@ FROM ubuntu:20.04
 RUN apt update
 RUN apt install -y sudo
 RUN apt install -y wget
+RUN apt install -y tree
+RUN apt install -y psmisc
 RUN apt install -y neofetch
 RUN apt install -y emacs
 RUN apt install -y python3 python3-pip git
@@ -41,9 +43,10 @@ RUN chmod a+x ${LOCAL}/bin/cfssl
 RUN chmod a+x ${LOCAL}/bin/cfssljson
 
 # Configure ETCD
-ENV CERT_DIR=${LOCAL}/var/lib/etcd/cfssl
+ENV VAR_ETCD_DIR=${LOCAL}/var/lib/etcd
+ENV CERT_DIR=${VAR_ETCD_DIR}/cfssl
 RUN mkdir -p ${CERT_DIR}
-RUN chmod 755 -R ${CERT_DIR}
+RUN chmod 700 -R ${VAR_ETCD_DIR}
 WORKDIR ${CERT_DIR}
 ENV years=5
 RUN validity=$((years*365*24)) &&\
